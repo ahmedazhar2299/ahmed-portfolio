@@ -1,7 +1,7 @@
-import Header from "./Components/Header.tsx";
 import "./App.css";
+import Home from "./Pages/Home.tsx";
 function App() {
-  return <Header />;
+  return <Home />;
 }
 
 export default App;
