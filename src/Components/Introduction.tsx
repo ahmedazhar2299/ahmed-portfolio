@@ -62,11 +62,13 @@ const Introduction = () => {
         </Image>
 
         <Description>
-          A Front-End Engineer with ten years’ experience of working on
-          designing, developing, and engineering enterprise applications
-          Typescript, ES 6+, React, Next.js, Node.js, PostgreSQL in Fin- Tech
-          and Banking industries. Familiar with C#, .NET, Python, Java and
-          MongoDB
+          Hi! I am Ahmed. A tech enthusiast with extensive hands-on experience
+          across various technology stacks, I thrive on embracing new challenges
+          and adapting swiftly to cutting-edge innovations. Attention to detail,
+          organizational finesse, and unwavering dedication define my approach
+          towards contributing to team success. Motivated by the pursuit of
+          excellence, I am driven to excel in dynamic and forward-thinking
+          technological landscapes.
         </Description>
       </Profile>
     </Wrapper>

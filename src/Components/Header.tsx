@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+interface ScrollProps {
+  isScroll: boolean;
+}
+
+const Wrapper = styled.div<ScrollProps>`
   padding: 1.5% 16%;
   display: flex;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   justify-content: space-between;
   font-weight: 700;
   font-size: 18px;
+  background-color: ${(props) => (props.isScroll ? "#151030" : "initial")};
   @media all and (max-width: 630px) {
     justify-content: center;
   }
+  &:scroll {
+  }
 `;
-const Title = styled.div`
+const Title = styled.div<ScrollProps>`
   background-color: inherit;
-  color: #151030;
+  color: ${(props) => (props.isScroll ? "#fff" : "#151030")};
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
@@ -49,9 +59,25 @@ const Section = styled.a`
 `;
 
 const Header = () => {
+  const [isScroll, setIsScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <Wrapper>
-      <Title> Muhammad Ahmed </Title>
+    <Wrapper isScroll={isScroll}>
+      <Title isScroll={isScroll}> Muhammad Ahmed </Title>
       <SectionWrapper>
         <Section>About</Section>
         <Section>Work</Section>

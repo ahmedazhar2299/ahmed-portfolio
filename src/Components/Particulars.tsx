@@ -35,6 +35,7 @@ const Skills = styled.div`
   .skills-list {
     font-size: 14px;
     color: rgb(100 91 147);
+    padding-left: 20px;
   }
 `;
 

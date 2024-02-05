@@ -7,6 +7,7 @@ interface WrapperProps {
 
 interface HeadingProps extends WrapperProps {
   title: string;
+  style?: object;
 }
 
 const Wrapper = styled.h2<WrapperProps>`
@@ -19,8 +20,12 @@ const Wrapper = styled.h2<WrapperProps>`
 `;
 
 const Heading = (props: HeadingProps) => {
-  const { title, color } = props;
-  return <Wrapper color={color}>{title}</Wrapper>;
+  const { title, color, style } = props;
+  return (
+    <Wrapper style={style} color={color}>
+      {title}
+    </Wrapper>
+  );
 };
 
 export default Heading;
