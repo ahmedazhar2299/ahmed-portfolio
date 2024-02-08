@@ -66,13 +66,17 @@ const Introduction = () => {
         </Image>
 
         <Description>
-          Hi! I am Ahmed. A tech enthusiast with extensive hands-on experience
-          across various technology stacks, I thrive on embracing new challenges
-          and adapting swiftly to cutting-edge innovations. Attention to detail,
-          organizational finesse, and unwavering dedication define my approach
-          towards contributing to team success. Motivated by the pursuit of
-          excellence, I am driven to excel in dynamic and forward-thinking
-          technological landscapes.
+          Hello there! I'm Ahmed, a dynamic software developer with a passion
+          for embracing the latest advancements in technology. With a strong
+          foundation in React, Django, TypeScript, and Node.js, I am adept at
+          crafting innovative solutions to complex problems. My journey through
+          diverse projects has honed my skills in building robust web
+          applications and leveraging emerging technologies like blockchain and
+          AI. I thrive in collaborative environments where I can contribute to
+          team success. With a commitment to excellence and a drive to stay at
+          the forefront of technological evolution, I am eager to tackle new
+          challenges and make a lasting impact in the ever-evolving world of
+          software development.
         </Description>
       </Profile>
     </Wrapper>

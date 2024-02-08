@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Interest from "../Components/Particulars.tsx";
 import Experience from "../Components/Experience.tsx";
 import Projects from "../Components/Projects.tsx";
+import Contact from "../Components/Contact.tsx";
 
 const Container = styled.div`
   padding: 70px 17%;
@@ -22,6 +23,7 @@ const Home = () => {
         <Interest />
         <Experience />
         <Projects />
+        <Contact />
       </Container>
     </>
   );
