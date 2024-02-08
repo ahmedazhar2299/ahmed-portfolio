@@ -42,6 +42,9 @@ const Skills = styled.div`
 const Title = styled.h5`
   font-size: 35px;
   color: #151030;
+  @media all and (max-width: 630px) {
+    font-size: 25px;
+  }
 `;
 
 const Particulars = () => {
@@ -81,7 +84,7 @@ const Particulars = () => {
           <li>AWS</li>
         </ul>
       </Skills>
-      <Skills>
+      <Skills id="experience">
         <Title>Interests</Title>
         <ul className="skills-list">
           <li>Open-Source</li>

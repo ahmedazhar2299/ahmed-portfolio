@@ -17,6 +17,10 @@ const Wrapper = styled.h2<WrapperProps>`
     text-align: center;
     font-size: 50px;
   }
+  @media all and (max-width: 630px) {
+    text-align: center;
+    font-size: 40px;
+  }
 `;
 
 const Heading = (props: HeadingProps) => {

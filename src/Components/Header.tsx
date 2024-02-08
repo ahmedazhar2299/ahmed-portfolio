@@ -52,6 +52,7 @@ const Section = styled.a`
   --tw-text-opacity: 1;
   color: rgb(170 166 195 / var(--tw-text-opacity));
   font-weight: 500;
+  text-decoration: none;
   &:hover {
     color: #6a6395;
     cursor: pointer;
@@ -63,7 +64,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -79,9 +80,9 @@ const Header = () => {
     <Wrapper isScroll={isScroll}>
       <Title isScroll={isScroll}> Muhammad Ahmed </Title>
       <SectionWrapper>
-        <Section>About</Section>
-        <Section>Work</Section>
-        <Section>Contact</Section>
+        <Section href="#introduction">About</Section>
+        <Section href="#experience">Work</Section>
+        <Section href="#contact">Contact</Section>
       </SectionWrapper>
     </Wrapper>
   );
