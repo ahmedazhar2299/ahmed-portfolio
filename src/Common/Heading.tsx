@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Animate from "./Animate.tsx";
 
 interface WrapperProps {
   color?: string;
@@ -26,9 +27,14 @@ const Wrapper = styled.h2<WrapperProps>`
 const Heading = (props: HeadingProps) => {
   const { title, color, style } = props;
   return (
-    <Wrapper style={style} color={color}>
-      {title}
-    </Wrapper>
+    <Animate
+      type="bottom"
+      children={
+        <Wrapper style={style} color={color}>
+          {title}
+        </Wrapper>
+      }
+    />
   );
 };
 

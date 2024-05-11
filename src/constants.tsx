@@ -1,5 +1,5 @@
 export enum PROFILE {
-  IMAGE = "https://media.licdn.com/dms/image/D4D03AQHHbBbuWNJzPg/profile-displayphoto-shrink_200_200/0/1696165822126?e=1712793600&v=beta&t=FhocQL41E0YT50P5RgqS2GJB8m6hYPhJp4aQ8yOKbsc",
+  IMAGE = "https://media.licdn.com/dms/image/D4D03AQEV2oln8N4NtA/profile-displayphoto-shrink_800_800/0/1714909576111?e=1720656000&v=beta&t=hM51Qe1mvhgh5aReFjWZp2iAIOt5qwDmRD63Y1ewmSQ",
 }
 
 export enum EDUCATION {
@@ -13,14 +13,17 @@ export enum COMPANY {
 
 export const EXPERIENCE_DATA = [
   {
-    designation: "Associate Full Stack",
+    designation: "Full Stack Engineer",
     company_name: "xiQ,Inc.",
     logo: COMPANY.XIQ_LOGO as string,
     duration: "JULY 2023 - Current",
     description: [
-      "WORKED IN GENERATIVE AI",
-      "WORKED IN GENERATIVE AI",
-      "WORKED IN GENERATIVE AI",
+      "Collaborated with product managers to deliver user-friendly experiences aligned with user needs",
+      "Revamped a product module managing 100k contacts data, improving functionality and usability",
+      "Led development of scalable features like audience segmentation, form handlers and email engagement",
+      "Conducted performance profiling and optimized backend systems upto 80%",
+      "Developed REST APIs, optimized database queries, and enhanced centralized logging systems",
+      "Utilized AWS services including Lambdas, ECS, SNS, SQS, and S3 for feature development and deployment",
     ],
   },
   {
@@ -28,7 +31,12 @@ export const EXPERIENCE_DATA = [
     company_name: "Tintash",
     duration: "JULY 2023 - Current",
     logo: COMPANY.TINTASH_LOGO as string,
-    description: ["WORKED IN GENERATIVE AI"],
+    description: [
+      "Engaged in brainstorming sessions, problem-solving, and cross-functional teamwork",
+      "Participated in an immersive project collaboration session",
+      "Crafted a to-do application using embedded JavaScript, gaining exposure to template engines in the backend",
+      "Created a collaborative blogging platform, enabling multiple users to read and share articles seamlessly",
+    ],
   },
 ];
 
@@ -58,3 +66,6 @@ export const PROJECTS_DATA = [
     redirection: "https://github.com/ahmedazhar2299/Campaign-Funding-Dapp",
   },
 ];
+
+
+export const EMAIL_RECEIPIENT = 'ahmed.azhar2299@gmail.com'

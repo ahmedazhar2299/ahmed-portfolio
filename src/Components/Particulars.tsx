@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { EDUCATION } from "../constants.tsx";
+import Animate from "../Common/Animate.tsx";
 
 const Wrapper = styled.div`
   margin-top: 40px;
@@ -49,53 +50,55 @@ const Title = styled.h5`
 
 const Particulars = () => {
   return (
-    <Wrapper>
-      <Education>
-        <Title>Education</Title>
-        <div className="education-container">
-          <img src={EDUCATION.UNIVERSITY_IMAGE} alt="education" />
-          <div className="education-description">
-            <p>National University of Computer and Emerging Sciences</p>
-            <ul className="education-addition-info">
-              <p>Bachelor of Science in Computer Science (2019-2023)</p>
-              <li>
-                CGPA <span>3.45</span>{" "}
-              </li>
-              <li>
-                <span>Silver</span> Medalist
-              </li>
-              <li>
-                <span>5x</span> on Dean’s List of Honors
-              </li>
-            </ul>
+    <Animate type="top">
+      <Wrapper>
+        <Education>
+          <Title>Education</Title>
+          <div className="education-container">
+            <img src={EDUCATION.UNIVERSITY_IMAGE} alt="education" />
+            <div className="education-description">
+              <p>National University of Computer and Emerging Sciences</p>
+              <ul className="education-addition-info">
+                <p>Bachelor of Science in Computer Science (2019-2023)</p>
+                <li>
+                  CGPA <span>3.45</span>{" "}
+                </li>
+                <li>
+                  <span>Silver</span> Medalist
+                </li>
+                <li>
+                  <span>5x</span> on Dean’s List of Honors
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </Education>
-      <Skills>
-        <Title>Skills</Title>
-        <ul className="skills-list">
-          <li>REACT JS</li>
-          <li>DJANGO</li>
-          <li>TYPESCRIPT</li>
-          <li>NODE JS</li>
-          <li>MYSQL</li>
-          <li>EXASOL</li>
-          <li>MONGODB</li>
-          <li>AWS</li>
-        </ul>
-      </Skills>
-      <Skills id="experience">
-        <Title>Interests</Title>
-        <ul className="skills-list">
-          <li>Open-Source</li>
-          <li>Blockchain & AI Technology</li>
-          <li>Fitness</li>
-          <li>Travelling</li>
-          <li>E-Sports</li>
-          <li>Badminton</li>
-        </ul>
-      </Skills>
-    </Wrapper>
+        </Education>
+        <Skills>
+          <Title>Skills</Title>
+          <ul className="skills-list">
+            <li>REACT JS</li>
+            <li>DJANGO</li>
+            <li>TYPESCRIPT</li>
+            <li>NODE JS</li>
+            <li>MYSQL</li>
+            <li>EXASOL</li>
+            <li>MONGODB</li>
+            <li>AWS</li>
+          </ul>
+        </Skills>
+        <Skills id="experience">
+          <Title>Interests</Title>
+          <ul className="skills-list">
+            <li>Open-Source</li>
+            <li>Blockchain & AI Technology</li>
+            <li>Fitness</li>
+            <li>Travelling</li>
+            <li>E-Sports</li>
+            <li>Badminton</li>
+          </ul>
+        </Skills>
+      </Wrapper>
+    </Animate>
   );
 };
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Heading from "../Common/Heading.tsx";
+import { EMAIL_RECEIPIENT } from "../constants.tsx";
 
 const Wrapper = styled.div`
   margin-top: 100px;
@@ -113,20 +114,33 @@ const RedirectText = styled.a`
 `;
 
 const Contact = () => {
+  const [name, setName] = useState<String>("");
+  const [message, setMessage] = useState<String>("");
+  const encodedMessage = encodeURIComponent(message + "\n\n" + name);
+
   return (
     <Wrapper id="contact">
       <FormContainer>
         <Tagline>GET IN TOUCH</Tagline>
         <Heading title="Contact" color="#fff" />
-        <ContactForm onSubmit={(e) => e.preventDefault()}>
+        <ContactForm
+          action={`mailto:${EMAIL_RECEIPIENT}?body=${encodedMessage}`}
+        >
           <FormLabel>Name</FormLabel>
-          <FormInput required type="text" placeholder="Enter your name" />
+          <FormInput
+            required
+            type="text"
+            placeholder="Enter your name"
+            onChange={(e) => setName(e.target?.value)}
+          />
           <FormLabel>Email</FormLabel>
           <FormInput required type="email" placeholder="Enter your email" />
           <FormLabel>Message</FormLabel>
-          <FormTextBox required placeholder="Leave a message">
-            Name
-          </FormTextBox>
+          <FormTextBox
+            required
+            placeholder="Leave a message"
+            onChange={(e) => setMessage(e.target?.value)}
+          ></FormTextBox>
 
           <FormButton>Submit</FormButton>
         </ContactForm>
@@ -149,18 +163,15 @@ const Contact = () => {
             <li>
               <img src="/svgs/linkedin.svg" alt="" />
               <RedirectText
-                href="https://www.linkedin.com/in/muhammad-ahmed-b7a050140/"
+                href="https://www.linkedin.com/in/ahmedazhar2299/"
                 target="_blank"
               >
-                linkedin.com/in/muhammad-ahmed-b7a050140/
+                linkedin.com/in/ahmedazhar2299
               </RedirectText>
             </li>
             <li>
               <img src="/svgs/gmail.svg" alt="" />
-              <RedirectText
-                href="mailto:ahmed.azhar2299@gmail.com"
-                target="_blank"
-              >
+              <RedirectText href={`mailto:${EMAIL_RECEIPIENT}`} target="_blank">
                 ahmed.azhar2299@gmail.com
               </RedirectText>
             </li>

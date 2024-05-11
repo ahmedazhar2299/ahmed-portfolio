@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Tilt } from "react-tilt";
 import { PROFILE } from "../constants.tsx";
 import Heading from "../Common/Heading.tsx";
+import Animate from "../Common/Animate.tsx";
 
 const Wrapper = styled.div``;
 const Profile = styled.div`
@@ -58,26 +59,37 @@ const Introduction = () => {
   return (
     <Wrapper>
       <Heading title="Introduction" color="#151030" />
-      <Profile>
-        <Image>
-          <Tilt options={defaultOptions} className="profile-img">
-            <img src={PROFILE.IMAGE} alt="profile" />
-          </Tilt>
-        </Image>
 
-        <Description>
-          Hello there! I'm Ahmed, a dynamic software developer with a passion
-          for embracing the latest advancements in technology. With a strong
-          foundation in React, Django, TypeScript, and Node.js, I am adept at
-          crafting innovative solutions to complex problems. My journey through
-          diverse projects has honed my skills in building robust web
-          applications and leveraging emerging technologies like blockchain and
-          AI. I thrive in collaborative environments where I can contribute to
-          team success. With a commitment to excellence and a drive to stay at
-          the forefront of technological evolution, I am eager to tackle new
-          challenges and make a lasting impact in the ever-evolving world of
-          software development.
-        </Description>
+      <Profile>
+        <Animate
+          children={
+            <Image>
+              <Tilt options={defaultOptions} className="profile-img">
+                <img src={PROFILE.IMAGE} alt="profile" />
+              </Tilt>
+            </Image>
+          }
+          type="left"
+        />
+
+        <Animate
+          children={
+            <Description>
+              Hello there! I'm Ahmed, a dynamic software developer with a
+              passion for embracing the latest advancements in technology. With
+              a strong foundation in React, Django, TypeScript, and Node.js, I
+              am adept at crafting innovative solutions to complex problems. My
+              journey through diverse projects has honed my skills in building
+              robust web applications and leveraging emerging technologies like
+              blockchain and AI. I thrive in collaborative environments where I
+              can contribute to team success. With a commitment to excellence
+              and a drive to stay at the forefront of technological evolution, I
+              am eager to tackle new challenges and make a lasting impact in the
+              ever-evolving world of software development.
+            </Description>
+          }
+          type="right"
+        />
       </Profile>
     </Wrapper>
   );

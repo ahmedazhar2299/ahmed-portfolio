@@ -107,6 +107,7 @@ const TimelineCard = styled.div`
 const Duration = styled.div<TimelineInterface>`
   min-width: 45%;
   padding-top: 17px;
+  margin: 0 100px;
   text-align: ${(props) => (props.reverse ? "right" : "left")};
   @media all and (max-width: 1280px) {
     display: none;
