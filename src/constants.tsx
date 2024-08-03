@@ -1,5 +1,5 @@
 export enum PROFILE {
-  IMAGE = "https://media.licdn.com/dms/image/D4D03AQEV2oln8N4NtA/profile-displayphoto-shrink_800_800/0/1714909576111?e=1720656000&v=beta&t=hM51Qe1mvhgh5aReFjWZp2iAIOt5qwDmRD63Y1ewmSQ",
+  IMAGE = "/images/Profile.jpeg",
 }
 
 export enum EDUCATION {
@@ -67,5 +67,4 @@ export const PROJECTS_DATA = [
   },
 ];
 
-
-export const EMAIL_RECEIPIENT = 'ahmed.azhar2299@gmail.com'
+export const EMAIL_RECEIPIENT = "ahmed.azhar2299@gmail.com";
